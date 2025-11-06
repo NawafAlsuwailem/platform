@@ -1,4 +1,4 @@
-package beynd.architecture.platform.query;
+package beynd.architecture.platform.command;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Query<T>{
+public class Command<T> {
     private T id;
     private T data;
 }
