@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@beynd/commitizen-config": "^1.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
