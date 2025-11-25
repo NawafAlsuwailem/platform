@@ -1,4 +1,4 @@
-package beynd.architecture.platform.query;
+package com.beynd.platform.command;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -7,7 +7,8 @@ import java.time.Instant;
 
 @Getter
 @Builder
-public class QueryResult<R> {
+public class CommandResult<R> {
+
     private final R data;
     private final Instant timestamp;
     private final String source;
@@ -20,24 +21,23 @@ public class QueryResult<R> {
         FAILURE
     }
 
-    public static <R> QueryResult<R> success(R data, String source, String traceId) {
-        return QueryResult.<R>builder()
+    public static <R> CommandResult<R> success(R data, String source, String traceId) {
+        return CommandResult.<R>builder()
                 .data(data)
                 .timestamp(Instant.now())
                 .source(source)
                 .traceId(traceId)
                 .status(Status.SUCCESS)
-                .message("Query executed successfully")
+                .message("Command executed successfully")
                 .build();
     }
 
-    public static <R> QueryResult<R> failure(String message, String traceId) {
-        return QueryResult.<R>builder()
+    public static <R> CommandResult<R> failure(String message, String traceId) {
+        return CommandResult.<R>builder()
                 .timestamp(Instant.now())
                 .status(Status.FAILURE)
                 .message(message)
                 .traceId(traceId)
                 .build();
     }
-
 }

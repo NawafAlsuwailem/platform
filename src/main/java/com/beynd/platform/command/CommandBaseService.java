@@ -1,4 +1,4 @@
-package beynd.architecture.platform.command;
+package com.beynd.platform.command;
 
 /**
  * Generic contract for all command operations.

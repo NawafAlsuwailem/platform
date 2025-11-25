@@ -1,4 +1,4 @@
-package beynd.architecture.platform.command;
+package com.beynd.platform.command;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

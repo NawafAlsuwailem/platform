@@ -1,4 +1,4 @@
-package beynd.architecture.platform.query;
+package com.beynd.platform.query;
 
 @FunctionalInterface
 public interface QueryValidator<T> {

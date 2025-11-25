@@ -1,4 +1,4 @@
-package beynd.architecture.platform.query;
+package com.beynd.platform.query;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
